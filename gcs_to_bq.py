@@ -30,7 +30,7 @@ with models.DAG(
         task_id='load_csv',
         bucket='',
         source_objects=['sample_data.csv'],
-        destination_project_dataset_table='tcomposer_test_dataset.composer_test_table',
+        destination_project_dataset_table='composer_test_dataset.composer_test_table',
         write_disposition='WRITE_TRUNCATE',
         autodetect=True,
         dag=dag
