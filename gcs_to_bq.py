@@ -36,5 +36,5 @@ with models.DAG(
         dag=dag
     )
 
- # 依存関係
+# 依存関係
 create_dataset >> load_csv
