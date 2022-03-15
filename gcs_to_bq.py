@@ -28,7 +28,7 @@ with models.DAG(
     # load csv data from gcs to bigquery
     load_csv = gcs_to_bq.GoogleCloudStorageToBigQueryOperator(
         task_id='load_csv',
-        bucket='odaira-composer-test',
+        bucket='',
         source_objects=['sample_data.csv'],
         destination_project_dataset_table='tcomposer_test_dataset.composer_test_table',
         write_disposition='WRITE_TRUNCATE',
