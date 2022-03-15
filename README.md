@@ -22,4 +22,4 @@ composerのバージョンは、「２」を選択する。
 環境作成によって自動作成されるDAG用のGCSバケットに、「gcs_to_bq.py」をアップロードする。
 ### DAGの実行
 airflowのwebUIから、DAGを実行する。  
-成功すると、BigQueryデータセットに、テーブルが作成される。
+成功すると、BigQueryデータセットにテーブル「composer_test_table」が作成される。
