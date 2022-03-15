@@ -18,14 +18,14 @@ with models.DAG(
     schedule_interval=None # スケジュール例'0 * * * *'
     ) as dag:
 
-    # create dataset
+    # データセットを作成するタスク
     create_dataset = bigquery_operator.BigQueryCreateEmptyDatasetOperator(
         task_id='create_dataset',
         dataset_id='composer_test_dataset',
         dag=dag
     )
 
-    # load csv data from gcs to bigquery
+    # GCSから、BQテーブルに、データをロードするタスク
     load_csv = gcs_to_bq.GoogleCloudStorageToBigQueryOperator(
         task_id='load_csv',
         bucket='',
@@ -36,4 +36,5 @@ with models.DAG(
         dag=dag
     )
 
+ # 依存関係
 create_dataset >> load_csv
