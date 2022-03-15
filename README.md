@@ -15,11 +15,11 @@ Composer(Airflow)では、ワークフローの各タスクをPythonで定義す
 ### Composesrの環境作成
 環境を作成する。  
 composerのバージョンは、「２」を選択する。  
-#### GCSバケットの作成
-サンプルデータを保存するためのGCSバケットを作成する。
+### GCSバケットの作成
+サンプルデータを保存するためのGCSバケットを作成する。  
 作成後、「sample_data.csv」をアップロードする。
-#### DAGのアップロード
+### DAGのアップロード
 環境作成によって自動作成されるDAG用のGCSバケットに、「gcs_to_bq.py」をアップロードする。
-#### DAGの実行
-airflowのwebUIから、DAGを実行する。
+### DAGの実行
+airflowのwebUIから、DAGを実行する。  
 成功すると、BigQueryデータセットに、テーブルが作成される。
