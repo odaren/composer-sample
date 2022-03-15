@@ -12,9 +12,9 @@ Composer(Airflow)では、ワークフローの各タスクをPythonで定義す
 2. GCSにあるサンプルデータを、BigQueryテーブルにロードする。
 
 ## 手順
-#### Composesrの環境作成
-Composerの環境を作成する。  
-バージョンは、「２」を選択する。  
+### Composesrの環境作成
+環境を作成する。  
+composerのバージョンは、「２」を選択する。  
 #### GCSバケットの作成
 サンプルデータを保存するためのGCSバケットを作成する。
 作成後、「sample_data.csv」をアップロードする。
