@@ -30,7 +30,7 @@ with models.DAG(
     # GCSから、BQテーブルに、データをロードするタスク
     load_csv = gcs_to_bq.GoogleCloudStorageToBigQueryOperator(
         task_id='load_csv',
-        bucket='',
+        bucket='', # 作成したGCSバケットを指定
         source_objects=['sample_data.csv'],
         destination_project_dataset_table='composer_test_dataset.composer_test_table',
         write_disposition='WRITE_TRUNCATE',
